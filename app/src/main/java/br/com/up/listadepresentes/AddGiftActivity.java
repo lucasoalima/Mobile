@@ -9,6 +9,8 @@ import android.widget.Button;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import br.com.up.listadepresentes.model.Gift;
+
 public class AddGiftActivity extends AppCompatActivity {
 
     private TextInputLayout inputLayoutName;
@@ -51,6 +53,11 @@ public class AddGiftActivity extends AppCompatActivity {
         String giftName = inputEditTextGift.getText().toString();
         String description = inputEditTextDescription.getText().toString();
 
-        
+        Gift gift = new Gift(
+                name,
+                giftName,
+                description
+        );
+
     }
 }
